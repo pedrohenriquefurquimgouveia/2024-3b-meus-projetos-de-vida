@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Micro+5&display=swap');
+
+
+:root{
+    --laranja:#FE7A36;
+    --azul-claro:#3652AD;
+    --roxo:#280274;
+    --azul-bebe:#E9F6FF;
+    --font-titulo:"Kode Mono", monospace;
+    --font-texto:"Micro 5", serif;
+
+}
+
+body{
+    background-color: var(--laranja);
+}
