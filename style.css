@@ -2,23 +2,23 @@
 
 
 :root{
-    --laranja:#FE7A36;
-    --azul-claro:#3652AD;
-    --roxo:#280274;
-    --azul-bebe:#E9F6FF;
+    --cinza:#353535;
+    --azul-escuro:#003cff;
+    --preto:#000000;
+    --branco:#ffffff;
     --font-titulo:"Kode Mono", monospace;
-    --font-texto:"Micro 5", serif;
+    --font-texto:"Kode Mono", serif;
 
 }
 
 body{
-    background-color: var(--laranja);
-    color: var(--azul-claro)
+    background-color: var(--preto);
+    color: var(--azul-escuro);
     font-family: var(--font-texto);
 }
 
 .conteudo-principal{
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -27,3 +27,56 @@ body{
     margin: 0 auto;
     
 }
+
+.titulo-principal{
+    text-align: left;
+    width: 100%;
+    font-size: 36px;
+}
+
+.titulo.principal span{
+    color: var(--azul-escuro);
+}
+
+.botao{
+    font-family: var(--font-texto);
+    font-size: 20px;
+    background-color: var(--azul-escuro);
+    color:var(--branco);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 1em;
+    width:100%;
+    border-bottom: 4px solid var(--preto);
+    border-right:4px solid var(--preto);
+}
+
+.botoes{
+    display: block;
+}
+
+.botao:first-child{
+    border-radius: 40px 40px 0 0;
+}
+
+.botao:last-child{
+    border-radius: 0 0 40px 40px;
+}
+
+.ativo{
+    background-color: var(--branco);
+    border-bottom: 4px solid var(--preto);
+}
+@media screen and(min-width: 768px) {
+    .botoes{
+        display: flex;
+    }
+    .botao:first-child{
+         border-radius:40px 0 0 0;
+    }
+    .botao:last-child{
+        border-radius: 0 40px 0 0;
+    }
+}
+
