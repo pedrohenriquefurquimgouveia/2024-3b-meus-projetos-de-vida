@@ -1,1 +1,0 @@
-# 2024-3b-meus-projetos-de-vida
