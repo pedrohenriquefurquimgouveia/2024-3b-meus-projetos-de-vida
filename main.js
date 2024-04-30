@@ -3,25 +3,12 @@ const textos = document.querySelectorAll('.aba-conteudo');
 
 const contadores = document.querySelectorAll(".contador")
 
-
 const tempoObjetivo01 = new Date("2024-04-31T00:00:00")
 const tempoObjetivo02 = new Date("2024-04-31T00:00:00")
 const tempoObjetivo03 = new Date("2024-04-31T00:00:00")
 const tempoObjetivo04 = new Date("2024-04-31T00:00:00")
 
 const tempos = [tempoObjetivo01, tempoObjetivo02, tempoObjetivo03, tempoObjetivo04];
-
-function atualizaCronometro() {
-    for (let i = 0; i < tempos.length; i++) {
-        contadores[i].textContent = calculaTempo(tempos[i])
-    }
-}
-function comecaCronometro(){
-    atualizaCronometro()
-    setInterval(atualizaCronometro, 1000)
-
-}
-//comecaCronometro();
 
 for (let i = 0; i < botoes.length; i++) {
     botoes[i].onclick = function () {
@@ -35,6 +22,25 @@ for (let i = 0; i < botoes.length; i++) {
         textos[i].classList.add('ativo')
     }
 }
+
+function atualizaCronometro() {
+   
+    document.getElementById("dias"+i).textContent = calculaTempo(tempos[0])[0];
+    document.getElementById("horas"+i).textContent = calculaTempo(tempos[0])[0];
+    document.getElementById("min"+i).textContent = calculaTempo(tempos[0])[0];
+    document.getElementById("seg"+i).textContent = calculaTempo(tempos[0])[0];
+    for (let i = 0; i < tempos.length; i++) {
+        //contadores[i].textContent = calculaTempo(tempos[i])
+    }
+}
+function comecaCronometro(){
+    atualizaCronometro()
+    setInterval(atualizaCronometro, 1000)
+
+}
+comecaCronometro();
+
+
 
 
 function calculaTempo(tempoObjetivo) {
